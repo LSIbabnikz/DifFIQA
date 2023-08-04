@@ -1,0 +1,44 @@
+
+base:
+  epochs: 1
+  verbose: 1
+  save_path: "./model_weights"
+  seed: 42069
+  device: "cuda:0"
+
+dataset:
+  val_split: 0.1
+  quality_loc: "./quality_scores"
+  image_loc: "todo"
+
+dataloader:
+  train:
+    params:
+      batch_size: 128
+      shuffle: True
+      pin_memory: True
+      num_workers: 10
+  val:
+    params:
+      batch_size: 128
+      pin_memory: True
+
+model:
+  config: "./configs/model_config.yaml"
+
+optimizer:
+  module: "torch.optim.Adam"
+  group_1:
+    params: "linear"
+    lr: 1.0e-3
+  group_2:
+    params: "base"
+    lr: 1.0e-4
+    limit: 100
+
+loss: 
+  module: "torch.nn.L1Loss"
+
+wandb:
+  use: 1
+  project: "diffiqa(r)"

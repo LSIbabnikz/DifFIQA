@@ -1,0 +1,12 @@
+
+inference: 
+  used_timesteps: 5
+  repeats: 10
+  images_loc: "todo"
+  train_config: "./configs/train_config.yaml"
+  model_loc: "./model_weights/diff_pretrain.pt"
+  fr_config: "./configs/fr_config.yaml"
+  save_loc: "."
+  batch_size: 64
+  verbose: 1
+

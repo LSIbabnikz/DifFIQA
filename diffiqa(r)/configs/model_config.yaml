@@ -1,0 +1,23 @@
+
+
+base_model:
+  module: "model_weights.iresnet.load_cosface"
+  weights: "./model_weights/weights.pth"
+  transformations:
+    trans_1:
+      module: "torchvision.transforms.Resize"
+      params:
+        size: [112, 112]
+    trans_2:
+      module: "torchvision.transforms.ToTensor"
+    trans_3:
+      module: "torchvision.transforms.Normalize"
+      params: 
+        mean: [.5, .5, .5]
+        std: [.5, .5, .5]
+
+model_head:
+  module: "torch.nn.Linear"
+  params:
+    in_features: 512
+    out_features: 1
