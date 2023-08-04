@@ -78,7 +78,7 @@ __Once you have configured the parameters run the inference script.__
 
 ## __4. Model Weights__
 
-__We provide the pretrained diffusion model weights used in the paper [here](https://unilj-my.sharepoint.com/:u:/g/personal/zb4290_student_uni-lj_si/ESPBeGxKtE1Dt-Nh0qL6lWUBz_dFLMOKIrbq4gSRsEHeaw?e=0A7aXQ).__
+__We provide the pretrained diffusion model weights used in the paper [here](https://unilj-my.sharepoint.com/:u:/g/personal/zb4290_student_uni-lj_si/EbL6taR4MjxMhkxJEc59SJgBid5iG8J95CJmmt6CR1w5lA?e=feXRA0).__
 
 - Download the provided weights and copy them into ./model_weights.
 
